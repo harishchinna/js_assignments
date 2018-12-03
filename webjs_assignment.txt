@@ -1,0 +1,138 @@
+1. List all the DOM objects names below.
+	the DOM objects are:
+	1)Document.
+	2)Element.
+	3)Attribute.
+	4)Event.
+	5)Style.
+
+
+
+2. List all the BOM objects names below.
+	The BOM objects are:
+	1)Navigator.
+	2)History.
+	3)Window.
+	4)Location.
+	5)Screen.
+
+
+
+3.1. Find out most commonly used functions(minimum 4) of "document" object and write their purpose with a code snippet which proves the purpose.
+	1)write()
+	The write() method writes HTML expressions or JavaScript code to a document.
+	document.write("Hello World!");
+	2)getElementById()
+	The getElementById() method returns the element that has the ID attribute with the specified value.
+	syntax:function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";}
+	3)getElementsByTagName()
+	The getElementsByTagName() method returns a collection of all elements in the document with the specified tag name, as a NodeList object.
+ 	var x = document.getElementsByTagName("LI");
+	4)getElementsByName()
+	The getElementsByName() method returns a collection of all elements in the document with the specified name (the value of the name attribute), as a NodeList object.
+	var x = document.getElementsByName("fname");
+
+
+
+3.2. Find out most commonly used functions(minimum 4) of "window" object and write their purpose with a code snippet which proves the purpose.
+	1)alert()
+	The alert() method displays an alert box with a specified message and an OK button.
+	alert("Hello! I am an alert box!!");
+	2)setInterval()
+	The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+	setInterval(function(){ alert("Hello"); }, 3000);
+	3)confirm()
+	The confirm() method displays a dialog box with a specified message, along with an OK and a Cancel button.
+	confirm("Press a button!");
+	4)focus()
+	The focus() method sets focus to the current window.
+	var myWindow = window.open("", "", "width=200, height=100");   
+	myWindow.document.write("<p>A new window!</p>");         
+	myWindow.focus(); 
+
+
+
+4. Create an HTML page with a button on it, when the button is clicked, it should display an alert box with text "Hello World"
+	<!DOCTYPE html>
+	<html>
+	<body>
+	<button onclick="myFunction()">Click me</button>
+	<script>
+	function myFunction()
+	{
+	 alert("Hello World");
+	}
+	</script>
+	</body>
+	</html>
+
+
+
+5. Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page.
+
+NOTE: The buttton might have gone after text appears.
+	<html>
+        <body>
+	<button onclick="myFunction()">Click Me</button>
+	<script type="text/javascript">
+	function myFunction()
+	{
+	    document.write("<h1>HELLO WORLD</h1>");
+	} 
+	</script>
+	</body>
+	</html>
+
+
+
+6. Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page, just below the button.
+
+NOTE: This time the button should not go off, it is still visible and present on the page.
+	<html>
+        <body>
+	<button onclick="myFunction()">Click Me</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	function myFunction()
+	{
+	    document.getElementById('demo').innerHTML="Hello World";
+	} 
+	</script>
+	</body>
+	</html>
+
+
+
+7. Create an HTML Page with a textbox and a button, write anything in the text box and click on the button, Onclick of the button it should display the text on the alert box that was entered in the textbox.
+	<html>
+        <body>
+     	Text Box:<input id="hell" type="text" name="text box" value="">
+	<button onclick="myFunction()">Click Me</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	function myFunction()
+	{
+    	var x=document.getElementById("hell").value;
+	    document.getElementById('demo').innerHTML=alert(x);
+	} 
+	</script>
+	</body>
+	</html>
+
+
+8. Create an HTML Page with a textbox and a button, write anything in the text box and click on the button, Onclick of the button it should display the text just below the textbox on the webpage that was entered in the textbox.
+	<html>
+        <body>
+     	Text Box:<input id="hell" type="text" name="text box" value="">
+	<p id="demo"></p>
+	<button onclick="myFunction()">Click Me</button>
+	<script type="text/javascript">
+	function myFunction()
+	{
+    	var x=document.getElementById("hell").value;
+	    document.getElementById('demo').innerHTML=x;
+	} 
+	</script>
+	</body>
+	</html>
